@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SpacePal</string>
+    <string name="hint_email">Email</string>
+    <string name="label_password">Password</string>
+    <string name="label_login">Login</string>
+    <string name="label_forgot_your_password">Forgot your password?</string>
+    <string name="driver">Driver</string>
+    <string name="picker">Picker</string>
+    <string name="submit_email">Submit</string>
+</resources>

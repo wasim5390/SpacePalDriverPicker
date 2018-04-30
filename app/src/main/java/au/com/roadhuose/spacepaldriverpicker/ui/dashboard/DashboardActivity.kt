@@ -1,6 +1,9 @@
 package au.com.roadhuose.spacepaldriverpicker.ui.dashboard
 
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import android.widget.Toast
 import au.com.roadhuose.spacepaldriverpicker.BaseActivity
 import au.com.roadhuose.spacepaldriverpicker.R
 import au.com.roadhuose.spacepaldriverpicker.util.PreferenceUtil
@@ -34,5 +37,28 @@ class DashboardActivity : BaseActivity() {
         // Set the adapter onto the view pager
         viewPager!!.adapter = adapter
 
+    }
+
+
+    override fun onSupportNavigateUp(): Boolean {
+        this.finish()
+        return true
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        when (item.itemId) {
+            R.id.action_search -> {
+                Toast.makeText(this, "worked", Toast.LENGTH_LONG).show()
+                return true
+            }
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

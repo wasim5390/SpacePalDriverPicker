@@ -22,4 +22,9 @@ public class ForgotPassActivity : BaseActivity() {
         transaction.commit()
         ForgotPassPresenter(forgotPassFragment)
     }
+
+    override fun onSupportNavigateUp(): Boolean {
+        this.finish()
+        return true
+    }
 }

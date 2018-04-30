@@ -7,4 +7,5 @@
     <string name="driver">Driver</string>
     <string name="picker">Picker</string>
     <string name="submit_email">Submit</string>
+    <string name="editprofile">Edit Profile</string>
 </resources>

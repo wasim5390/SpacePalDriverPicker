@@ -1,4 +1,4 @@
-package au.com.roadhuose.spacepaldriverpicker
+package com.spacepal.internal.app
 
 import org.junit.Test
 

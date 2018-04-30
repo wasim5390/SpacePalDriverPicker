@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="au.com.roadhuose.spacepaldriverpicker">
+    package="com.spacepal.internal.app">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <application
@@ -24,8 +24,14 @@
             android:theme="@style/AppTheme" />
         <activity
             android:name=".ui.forgotpassword.ForgotPassActivity"
-            android:screenOrientation="portrait"
             android:label="Forgot Password"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".ui.profile.ProfileActivity"
+            android:label="Edit My Profile"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
     </application>
 

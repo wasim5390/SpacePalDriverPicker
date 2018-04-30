@@ -7,7 +7,7 @@ apply plugin: 'kotlin-kapt'
 android {
     compileSdkVersion 27
     defaultConfig {
-        applicationId "au.com.roadhuose.spacepaldriverpicker"
+        applicationId "com.spacepal.internal.app"
         minSdkVersion 19
         targetSdkVersion 27
         versionCode 1

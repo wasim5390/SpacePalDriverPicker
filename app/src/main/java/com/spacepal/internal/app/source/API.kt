@@ -1,10 +1,10 @@
 package com.spacepal.internal.app.source
 
+import com.spacepal.internal.app.model.ChangePassword
 import com.spacepal.internal.app.model.EmailBody
+import com.spacepal.internal.app.model.Profile
 import com.spacepal.internal.app.model.Role
-import com.spacepal.internal.app.model.User
 import com.spacepal.internal.app.model.response.Order
-import com.spacepal.internal.app.model.response.Profile
 import com.spacepal.internal.app.model.response.TokenResponse
 import retrofit2.Call
 import retrofit2.http.*
@@ -33,14 +33,17 @@ interface API {
     /** */
 
     /********************* Account  */
-    @POST("/v1/Users")
-    fun createAccount(@Body user: User): Call<User>
+//    @POST("/v1/Users")
+//    fun createAccount(@Body user: User): Call<User>
 
     @POST("/v1/Users")
     fun updateAccount(@Body profile: Profile): Call<Void>
 
     @GET("/v1/Order/Dash")
     fun getOrders(@Query("role") role: String): Call<List<Order>>
+
+    @POST("/v1/User/change-password")
+    fun changePassword(@Body changePassword: ChangePassword): Call<Void>
 
 
 }

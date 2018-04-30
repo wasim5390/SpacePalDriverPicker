@@ -9,7 +9,7 @@ import com.spacepal.internal.app.BaseFragment
 import com.spacepal.internal.app.Constant.ROLE_DRIVER
 import com.spacepal.internal.app.Constant.ROLE_PICKER
 import com.spacepal.internal.app.R
-import com.spacepal.internal.app.model.response.Profile
+import com.spacepal.internal.app.model.Profile
 import com.spacepal.internal.app.model.response.TokenResponse
 import com.spacepal.internal.app.ui.dashboard.DashboardActivity
 import com.spacepal.internal.app.ui.forgotpassword.ForgotPassActivity

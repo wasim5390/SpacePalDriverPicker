@@ -4,7 +4,7 @@ import android.content.Context
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentStatePagerAdapter
-import com.spacepal.internal.app.model.response.Profile
+import com.spacepal.internal.app.model.Profile
 import java.util.*
 
 class DashboardFragmentPagerAdapter(private val mContext: Context, fm: FragmentManager, internal var profile: Profile) : FragmentStatePagerAdapter(fm) {

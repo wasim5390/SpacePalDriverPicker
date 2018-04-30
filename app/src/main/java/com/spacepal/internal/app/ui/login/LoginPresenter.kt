@@ -2,7 +2,7 @@ package com.spacepal.internal.app.ui.login
 
 import com.spacepal.internal.app.Constant
 import com.spacepal.internal.app.Constant.*
-import com.spacepal.internal.app.model.response.Profile
+import com.spacepal.internal.app.model.Profile
 import com.spacepal.internal.app.model.response.TokenResponse
 import com.spacepal.internal.app.source.RetrofitHelper
 import com.spacepal.internal.app.util.PreferenceUtil

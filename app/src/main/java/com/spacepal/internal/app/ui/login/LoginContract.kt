@@ -2,7 +2,7 @@ package com.spacepal.internal.app.ui.login
 
 import com.spacepal.internal.app.BasePresenter
 import com.spacepal.internal.app.BaseView
-import com.spacepal.internal.app.model.response.Profile
+import com.spacepal.internal.app.model.Profile
 import com.spacepal.internal.app.model.response.TokenResponse
 
 class LoginContract {

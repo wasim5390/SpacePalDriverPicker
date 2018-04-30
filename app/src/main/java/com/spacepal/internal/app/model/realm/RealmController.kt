@@ -1,13 +1,6 @@
 package com.spacepal.internal.app.model.realm
 
-import android.app.Activity
 import android.app.Application
-import android.support.v4.app.Fragment
-import com.spacepal.internal.app.model.Role
-import com.spacepal.internal.app.model.User
-import com.spacepal.internal.app.model.response.Order
-import io.realm.Realm
-import io.realm.RealmObject
 
 class RealmController(application: Application) {
 //    val realm: Realm

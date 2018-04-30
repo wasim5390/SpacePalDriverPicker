@@ -3,8 +3,7 @@ package com.spacepal.internal.app.util
 import android.content.Context
 import android.content.Context.MODE_PRIVATE
 import android.content.SharedPreferences
-import com.spacepal.internal.app.model.User
-import com.spacepal.internal.app.model.response.Profile
+import com.spacepal.internal.app.model.Profile
 import com.spacepal.internal.app.model.response.TokenResponse
 import com.google.gson.Gson
 

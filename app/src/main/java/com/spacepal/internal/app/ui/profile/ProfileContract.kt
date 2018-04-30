@@ -2,7 +2,7 @@ package com.spacepal.internal.app.ui.profile
 
 import com.spacepal.internal.app.BasePresenter
 import com.spacepal.internal.app.BaseView
-import com.spacepal.internal.app.model.response.Profile
+import com.spacepal.internal.app.model.Profile
 
 class ProfileContract {
     interface View : BaseView<Presenter> {

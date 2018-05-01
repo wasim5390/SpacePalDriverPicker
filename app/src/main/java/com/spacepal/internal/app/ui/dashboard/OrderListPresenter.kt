@@ -12,28 +12,25 @@ class OrderListPresenter(private val view: OrderListContract.View, private val p
 
     init {
         this.view.setPresenter(this)
+
     }
 
     override fun start() {
-
     }
 
     override fun getOrders(role: String) {
-//        view.showProgressDialog(true)
-
+        view.showProgressDialog(false)
         val call = RetrofitHelper.instance!!.api!!.getOrders(role)
         call.enqueue(object : Callback<List<Order>> {
             override fun onResponse(call: Call<List<Order>>, response: Response<List<Order>>) {
-
                 if (response.code() == 200) {
-                    view.showProgressDialog(false)
                     view.showOrders(response.body()!!)
-
                 } else {
                     val error = Util.parseError(response)
                     view.showMessage(error.getError()!!, true)
-
+                    view.showOnErrorOnEmpty()
                 }
+                view.showProgressDialog(false)
             }
 
             override fun onFailure(call: Call<List<Order>>, t: Throwable) {

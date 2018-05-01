@@ -14,6 +14,10 @@ import kotlinx.android.synthetic.main.fragment_jobs_list.*
 
 
 class OrderListFragment : BaseFragment(), OrderListContract.View {
+    override fun showOnErrorOnEmpty() {
+        jobsRecyclerView.visibility = View.GONE
+        tvMessage.visibility = View.VISIBLE
+    }
 
     private lateinit var presenter: OrderListContract.Presenter
 

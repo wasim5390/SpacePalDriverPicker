@@ -30,12 +30,12 @@ class LoginPresenter(private val loginView: LoginContract.View, private var pref
                 if (response.code() == 200) {
                     loginView.userRetrieved(response.body()!!)
                     loginView.signInIsSuccessful(response.body()!!)
-//                    loginView.showProgressDialog(false)
+                    loginView.showProgressDialog(false)
                 } else {
 
                     val error = Util.parseError(response)
-                    loginView.showMessage(error.getErrorDescription()!!, true)
-
+                    loginView.showMessage(error.getError()!!, true)
+                    loginView.showProgressDialog(false)
                 }
             }
 
@@ -82,8 +82,9 @@ class LoginPresenter(private val loginView: LoginContract.View, private var pref
                         "USER_LOCKOUT" -> loginView.showMessage("We've locked your account after too many failed attempts to sign in. Contact your administrator to unlock your account.", true)
                         "USER_DISABLED" -> loginView.showMessage("Your account has been disabled. Contact your administrator to activate your account.", true)
                     }
+                    loginView.showProgressDialog(false)
                 }
-                loginView.showProgressDialog(false)
+//                loginView.showProgressDialog(false)
             }
 
             override fun onFailure(call: Call<TokenResponse>, t: Throwable) {

@@ -10,6 +10,7 @@ class OrderListContract {
         fun showOrders(mListOrder: List<Order>)
         fun showMessage(text: String, alert: Boolean)
         fun showProgressDialog(isInProgress: Boolean)
+        fun showOnErrorOnEmpty()
     }
 
 

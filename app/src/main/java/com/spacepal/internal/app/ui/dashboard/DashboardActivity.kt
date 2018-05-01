@@ -5,11 +5,11 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import com.roadhourse.spacepal.ui.dashboard.OrderListFragment
 import com.spacepal.internal.app.BaseActivity
 import com.spacepal.internal.app.R
 import com.spacepal.internal.app.ui.profile.ProfileActivity
 import com.spacepal.internal.app.util.PreferenceUtil
-import com.roadhourse.spacepal.ui.dashboard.OrderListFragment
 import kotlinx.android.synthetic.main.activity_dashboard.*
 import kotlinx.android.synthetic.main.fragment_dashboard.*
 
@@ -21,7 +21,7 @@ class DashboardActivity : BaseActivity() {
 
 
         setSupportActionBar(toolbar)
-        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+//        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
         sliding_tabs!!.setupWithViewPager(viewPager)
 
@@ -42,10 +42,10 @@ class DashboardActivity : BaseActivity() {
     }
 
 
-    override fun onSupportNavigateUp(): Boolean {
-        this.finish()
-        return true
-    }
+//    override fun onSupportNavigateUp(): Boolean {
+//        this.finish()
+//        return true
+//    }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu);

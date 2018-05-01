@@ -31,7 +31,7 @@ class OrderListPresenter(private val view: OrderListContract.View, private val p
 
                 } else {
                     val error = Util.parseError(response)
-                    view.showMessage(error.getErrorDescription()!!, true)
+                    view.showMessage(error.getError()!!, true)
 
                 }
             }

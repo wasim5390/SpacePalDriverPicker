@@ -8,10 +8,8 @@ import com.spacepal.internal.app.model.response.Order
 class OrderListContract {
     public interface View : BaseView<Presenter> {
         fun showOrders(mListOrder: List<Order>)
-
         fun showMessage(text: String, alert: Boolean)
         fun showProgressDialog(isInProgress: Boolean)
-
     }
 
 

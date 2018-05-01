@@ -8,6 +8,7 @@ import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import com.spacepal.internal.app.ui.ProgressFragmentDialog
+import org.jetbrains.anko.alert
 
 
 /**
@@ -105,8 +106,12 @@ abstract class BaseActivity : AppCompatActivity(), Constant {
 
     }
 
-    fun showAlertDialog(message: String, alert: Boolean) {
-        val title = if (alert) "Oops!" else ""
+    fun showAlertDialog(message: String, alert: Boolean, activity: BaseActivity) {
+        alert(message) {
+            title = "Alert"
+            yesButton { }
+        }.show()
+
         // Create Alert using Builder
         /*    CFAlertDialog.Builder builder = new CFAlertDialog.Builder(this)
                 .setDialogStyle(CFAlertDialog.CFAlertStyle.ALERT).setCornerRadius(50)

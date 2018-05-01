@@ -33,6 +33,11 @@
             android:label="Edit My Profile"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ui.changepassword.ChangePasswordActivity"
+            android:label="Change Password"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>

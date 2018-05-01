@@ -79,8 +79,8 @@ class LoginPresenter(private val loginView: LoginContract.View, private var pref
                     when (error.getErrorCode()) {
                         "PASSWORD_INVALID" -> loginView.showErrorOnPassword("Invalid Password ${error.getRemTryAllowed()} tries remaining", true)
                         "USER_NOT_FOUND" -> loginView.showErrorOnEmail("Invalid email", true)
-                        "USER_LOCKOUT" -> loginView.showMessage("Locked out!", true)
-                        "USER_DISABLED" -> loginView.showMessage("Disabled!", true)
+                        "USER_LOCKOUT" -> loginView.showMessage("We've locked your account after too many failed attempts to sign in. Contact your administrator to unlock your account.", true)
+                        "USER_DISABLED" -> loginView.showMessage("Your account has been disabled. Contact your administrator to activate your account.", true)
                     }
                 }
                 loginView.showProgressDialog(false)
@@ -93,29 +93,4 @@ class LoginPresenter(private val loginView: LoginContract.View, private var pref
             }
         })
     }
-
-//    override fun getRoles() {
-//
-////        loginView.showProgressDialog(true)
-//
-//        val call = RetrofitHelper.instance!!.api.roles
-//        call.enqueue(object : Callback<List<Role>> {
-//            override fun onResponse(call: Call<List<Role>>, response: Response<List<Role>>) {
-////                loginView.showProgressDialog(false)
-//                if (response.code() == 200) {
-//                    loginView.rolesRetrieved(response.body()!!)
-//
-//                } else {
-//                    val error = Util.parseError(response)
-//                    loginView.showMessage(error.getErrorDescription()!!, true)
-//                }
-//            }
-//
-//            override fun onFailure(call: Call<List<Role>>, t: Throwable) {
-//                loginView.showProgressDialog(false)
-//                loginView.showMessage("Fail...", true)
-//                t.printStackTrace()
-//            }
-//        })
-//    }
 }

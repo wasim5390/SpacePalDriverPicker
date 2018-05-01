@@ -17,7 +17,7 @@ class ChangePasswordFragment : BaseFragment(), ChangePasswordContract.View {
         get() = R.layout.fragment_changepassword
 
     override fun initUI(view: View) {
-        btnConfirm.setOnClickListener { }
+        btnConfirm.setOnClickListener { changePassword() }
     }
 
     override fun changePasswordRequestSuccess() {
@@ -26,7 +26,7 @@ class ChangePasswordFragment : BaseFragment(), ChangePasswordContract.View {
     }
 
     override fun showMessage(text: String, alert: Boolean) {
-        alertMessages(text)
+        showAlert(text, alert)
     }
 
     override fun showProgressDialog(isInProgress: Boolean) {

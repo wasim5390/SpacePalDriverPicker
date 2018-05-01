@@ -1,10 +1,12 @@
 package com.spacepal.internal.app.ui.profile
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import com.spacepal.internal.app.BaseFragment
 import com.spacepal.internal.app.R
 import com.spacepal.internal.app.model.Profile
+import com.spacepal.internal.app.ui.changepassword.ChangePasswordActivity
 import kotlinx.android.synthetic.main.fragment_profile.*
 
 public class ProfileFragment : BaseFragment(), ProfileContract.View {
@@ -16,6 +18,12 @@ public class ProfileFragment : BaseFragment(), ProfileContract.View {
 
     override fun initUI(view: View) {
         btnSubmit.setOnClickListener { sumbitForm() }
+        tvChangePassword.setOnClickListener {
+            startActivity(Intent(mBaseActivity, ChangePasswordActivity::class.java))
+        }
+        tvLogout.setOnClickListener {
+            //logout code
+        }
     }
 
     override fun submitSuccessfull(profile: Profile) {

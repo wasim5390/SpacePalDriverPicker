@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.Toast
 import com.spacepal.internal.app.BaseFragment
 import com.spacepal.internal.app.Constant.ROLE_DRIVER
 import com.spacepal.internal.app.Constant.ROLE_PICKER
@@ -52,7 +51,8 @@ class LoginFragment : BaseFragment(), LoginContract.View {
             val intent = Intent(context, DashboardActivity::class.java)
             startActivity(intent)
         } else
-            Toast.makeText(activity, "Don't have privilege to access this app", Toast.LENGTH_SHORT).show()
+//            Toast.makeText(activity, "Don't have privilege to access this app", Toast.LENGTH_SHORT).show()
+            showAlert("You don't have privilege to access this app", true)
 
     }
 
@@ -64,7 +64,7 @@ class LoginFragment : BaseFragment(), LoginContract.View {
 
     override fun showMessage(text: String, alert: Boolean) {
 //        Toast.makeText(mBaseActivity, text, Toast.LENGTH_SHORT).show()
-        alertMessages(text)
+        showAlert(text, alert)
     }
 
     override fun showErrorOnEmail(error: String, visible: Boolean) {

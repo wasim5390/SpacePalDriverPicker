@@ -3,9 +3,9 @@ package com.spacepal.internal.app.ui.forgotpassword
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import com.roadhourse.spacepal.ui.login.LoginActivity
 import com.spacepal.internal.app.BaseFragment
 import com.spacepal.internal.app.R
-import com.roadhourse.spacepal.ui.login.LoginActivity
 import kotlinx.android.synthetic.main.fragment_forgotpassword.*
 
 public class ForgotPassFragment : BaseFragment(), ForgotPassContract.View {
@@ -19,7 +19,7 @@ public class ForgotPassFragment : BaseFragment(), ForgotPassContract.View {
     private lateinit var presenter: ForgotPassContract.Presenter
 
     override fun showMessage(text: String, alert: Boolean) {
-        alertMessages(text)
+        showAlert(text, alert)
     }
 
     override fun setPresenter(presenter: ForgotPassContract.Presenter) {
@@ -35,7 +35,7 @@ public class ForgotPassFragment : BaseFragment(), ForgotPassContract.View {
         get() = R.layout.fragment_forgotpassword
 
     override fun initUI(view: View) {
-        
+
         buttonSubmit.setOnClickListener { requestForgotPassword() }
     }
 

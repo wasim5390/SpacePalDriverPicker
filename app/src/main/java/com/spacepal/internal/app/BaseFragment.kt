@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.roadhourse.spacepal.ui.login.LoginActivity
 import org.jetbrains.anko.alert
 import java.util.*
 
@@ -49,7 +50,7 @@ abstract class BaseFragment : Fragment(), Constant {
 
     fun showAlert(message: String, alert: Boolean) {
         try {
-            mBaseActivity!!.showAlertDialog(message, alert)
+            mBaseActivity!!.showAlertDialog(message, alert, LoginActivity())
         } catch (e: Exception) {
             Log.e("Dialog Exception", e.message)
         }

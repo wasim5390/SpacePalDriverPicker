@@ -9,6 +9,10 @@ import retrofit2.Response
 
 class ChangePasswordPresenter(private val changePasswordView: ChangePasswordContract.View) : ChangePasswordContract.Presenter {
 
+    init{
+        this.changePasswordView.setPresenter(this)
+    }
+
     override fun changePasswordRequest(changePassword: ChangePassword) {
         changePasswordView.showProgressDialog(true)
         val call = RetrofitHelper.instance!!.api.changePassword(changePassword)

@@ -8,7 +8,7 @@ import android.widget.Toast
 import com.spacepal.internal.app.BaseFragment
 import com.spacepal.internal.app.R
 import com.spacepal.internal.app.model.adapter.OrderAdapter
-import com.spacepal.internal.app.model.response.Order
+import com.spacepal.internal.app.model.response.AssignmentItem
 import com.spacepal.internal.app.ui.dashboard.OrderListContract
 import kotlinx.android.synthetic.main.fragment_jobs_list.*
 
@@ -26,18 +26,18 @@ class OrderListFragment : BaseFragment(), OrderListContract.View {
 
     override fun initUI(view: View) {
         val role = arguments!!.getString(ARG_ROLE, "")
-//        val userId = arguments!!.getShort(ARG_USER_ID)
-        presenter.getOrders(role)
+        val userId = arguments!!.getString(ARG_USER_ID)
+        presenter.getOrders(userId,role)
     }
 
     override fun setPresenter(presenter: OrderListContract.Presenter) {
         this.presenter = presenter
     }
 
-    override fun showOrders(mListOrder: List<Order>) {
+    override fun showOrders(mListAssignmentItem: List<AssignmentItem>) {
         jobsRecyclerView.layoutManager = LinearLayoutManager(mBaseActivity)
         jobsRecyclerView.itemAnimator = DefaultItemAnimator()
-        jobsRecyclerView.adapter = OrderAdapter(mBaseActivity, mListOrder)
+        jobsRecyclerView.adapter = OrderAdapter(mBaseActivity, mListAssignmentItem)
     }
 
     override fun showMessage(text: String, alert: Boolean) {
